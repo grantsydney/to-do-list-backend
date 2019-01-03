@@ -37,8 +37,9 @@ class Api::V1::ListsController < ApplicationController
     render json: {message: "list deleted"}, status: :ok
   end
 
+  private
   def list_params
-    params.permit(:name, :user_id)
+    params.permit(:name, :user_id, :color)
   end
 
   def find_list
